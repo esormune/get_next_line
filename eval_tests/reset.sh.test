@@ -1,0 +1,20 @@
+if
+for f in eval_tests/*
+do
+	mv "$f" "$f.test"
+done ; then
+	echo "Successfully renamed files."
+else
+	echo "Failed to rename files."
+fi
+
+if
+rm -f *.txt *.o main.c bits_main.c do.sh test_gnl ; then
+	echo "Deleted test files."
+else
+	echo "Couldn't delete test files."
+fi
+
+echo "Self-destructing..."
+
+rm -- "$0"
